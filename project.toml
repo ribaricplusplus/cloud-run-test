@@ -3,4 +3,4 @@
     value = "17"
 [[build.env]]
     name = "GOOGLE_ENTRYPOINT"
-    value = "spring-boot:run"
+    value = "mvn spring-boot:run"
