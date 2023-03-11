@@ -18,7 +18,6 @@ package com.cloudrun.microservicetemplate;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.slf4j.MDC;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,12 +33,6 @@ public class MicroserviceController {
   /** Example endpoint handler. */
   @GetMapping("/")
   public @ResponseBody String index() {
-    // Example of structured logging - add custom fields
-    MDC.put("logField", "custom-entry");
-    MDC.put("arbitraryField", "custom-entry");
-    // Use logger with log correlation
-    // https://cloud.google.com/run/docs/logging#correlate-logs
-    logger.info("Structured logging example.");
     return "Hello World!";
   }
 }
