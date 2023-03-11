@@ -1,6 +1,3 @@
 [[build.env]]
     name = "GOOGLE_RUNTIME_VERSION"
     value = "17"
-[[build.env]]
-    name = "GOOGLE_ENTRYPOINT"
-    value = "mvn spring-boot:run"
